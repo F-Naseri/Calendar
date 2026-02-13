@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify | مدیریت مشاوره</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fas fa-wave-square"></i> مودیفای
+        </div>
+        <ul class="nav-menu">
+            <li><i class="fas fa-th-large"></i> داشبورد</li>
+            <li class="active"><i class="fas fa-comment-dots"></i> مشاوره</li>
+            <li><i class="fas fa-user-md"></i> پزشکان</li>
+            <li><i class="fas fa-user-injured"></i> بیماران</li>
+            <li><i class="fas fa-layer-group"></i> بخش‌ها</li>
+            <li><i class="fas fa-pills"></i> داروها</li>
+            <li><i class="fas fa-file-invoice-dollar"></i> فاکتورها</li>
+            <li><i class="fas fa-envelope"></i> ایمیل‌ها <span class="badge">6</span></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="header-title">
+                <h1>مشاوره</h1>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="جستجو">
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-bell"></i>
+                    <div class="user-info">
+                        <span>محمد قاسمی</span>
+                        <small>ادمین</small>
+                    </div>
+                    <img src="pictures/10.jpg" alt="Admin">
+                </div>
+            </div>
+        </header>
+
+        <div class="border">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header"><span>کل مشاوره‌ها</span> <i class="fas fa-file-alt"></i></div>
+                    <h3>275</h3>
+                    <small class="up"><i class="fas fa-arrow-up"></i> 1.25% از هفته پیش</small>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header"><span>مشاوره‌های تکمیل شده</span> <i class="fas fa-check-circle"></i></div>
+                    <h3>105</h3>
+                    <small class="up"><i class="fas fa-arrow-up"></i> 4.56% از هفته پیش</small>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header"><span>مشاوره‌های در انتظار</span> <i class="fas fa-clock"></i></div>
+                    <h3>153</h3>
+                    <small class="down"><i class="fas fa-arrow-down"></i> 0.78% از هفته پیش</small>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header"><span>مشاوره‌های لغو شده</span> <i class="fas fa-times-circle"></i></div>
+                    <h3>17</h3>
+                    <small class="up"><i class="fas fa-arrow-up"></i> 3.62% از هفته پیش</small>
+                </div>
+            </div>
+
+            <div class="middle-grid">
+                <div class="card today-counselling">
+                    <div class="card-header">
+                        <h3>جلسات امروز</h3>
+                        <div class="calendar-mini">
+                            <i class="fas fa-chevron-right"></i>
+                            <span class="day active">13 سپتامبر</span>
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    </div>
+                    <div class="apt-row">
+                        <div class="apt-user">
+                            <img src="https://i.pravatar.cc/150?u=a1" alt="">
+                            <div><strong>سهیل رمضانی</strong> <br> <small>دکتر آرزو فرهادی</small></div>
+                        </div>
+                        <div class="time">12:30 ب.ظ <br> <span class="tag-done">تکمیل شده</span></div>
+                    </div>
+                    <div class="apt-row">
+                        <div class="apt-user">
+                            <img src="https://i.pravatar.cc/150?u=a2" alt="">
+                            <div><strong>سارا رحمانی</strong> <br> <small>دکتر علیرضا کریمی</small></div>
+                        </div>
+                        <div class="time">01:45 ب.ظ <br> <span class="tag-pending">در انتظار</span></div>
+                    </div>
+                </div>
+
+                <div class="card pending-card">
+                    <h3>در انتظار تایید</h3>
+                    <div class="request-box">
+                        <div class="req-header">
+                            <img src="https://i.pravatar.cc/150?u=a2" alt="">
+                            <div><strong>سارا رحمانی</strong></div>
+                        </div>   
+                        <div class="dtime"><small>دکتر علیرضا کریمی</small><small>1404/12/02</small></div>
+                        <div class="dtime"><small>خانواده درمانی</small><small>01:45 ب.ظ</small></div>
+                        <div class="req-actions">
+                            <button class="btn-reject">رد</button>
+                            <button class="btn-accept">تایید</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card cancelled-card">
+                    <h3>لغو شده‌ها</h3>
+                    <div class="request-box">
+                        <div class="req-header">
+                            <img src="https://i.pravatar.cc/150?u=a4" alt="">
+                            <div><strong>فرهاد رمضانی</strong></div>
+                        </div>
+                        <div class="dtime2"><small>1404/12/1</small><small>11:15 ق.ظ</small></div>
+                        <div class="dtime3"><small>عدم امکان برقراری تماس تلفنی با مراجعه کننده<br>دکتر مینا غلامی</small></div>
+                        <div class="req-actions2">
+                            <button class="btn-notify">اطلاع دادن به پزشک</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card table-card">
+                <div class="table-header">
+                    <h3>تمامی جلسات</h3>
+                    <button class="btn-add">+ نوبت جدید</button>
+                </div>
+                <table class="main-table">
+                    <thead>
+                        <tr>
+                            <th>شناسه</th>
+                            <th>بیمار</th>
+                            <th>سن</th>
+                            <th>جنسیت</th>
+                            <th>پزشک</th>
+                            <th>نوع مشاوره</th>
+                            <th>وضعیت</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MDF-P001</td>
+                            <td><div class="cell-user"><img src="https://i.pravatar.cc/150?u=a5" alt=""> اولیویا مارتینز</div></td>
+                            <td>32</td>
+                            <td>زن</td>
+                            <td>دکتر گما اوکانر</td>
+                            <td>زوج درمانی</td>
+                            <td><span class="tag-done">تکمیل شده</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
