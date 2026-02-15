@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moodify | مدیریت مشاوره</title>
+    <title>Moodify</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="moodify.css">
 </head>
 <body>
-
     <aside class="sidebar">
         <div class="logo">
-            <i class="fas fa-wave-square"></i> مودیفای
+            <i class="fas fa-brain"></i> مودیفای
         </div>
         <ul class="nav-menu">
             <li><i class="fas fa-th-large"></i> داشبورد</li>
@@ -28,7 +27,10 @@
     <main class="main-content">
         <header class="top-header">
             <div class="header-title">
-                <h1>مشاوره</h1>
+                <button class="btn-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2>مشاوره</h2>
             </div>
             <div class="header-actions">
                 <div class="search-box">
@@ -83,14 +85,14 @@
                     </div>
                     <div class="apt-row">
                         <div class="apt-user">
-                            <img src="https://i.pravatar.cc/150?u=a1" alt="">
+                            <img src="pictures/2.jpg">
                             <div><strong>سهیل رمضانی</strong> <br> <small>دکتر آرزو فرهادی</small></div>
                         </div>
                         <div class="time">12:30 ب.ظ <br> <span class="tag-done">تکمیل شده</span></div>
                     </div>
                     <div class="apt-row">
                         <div class="apt-user">
-                            <img src="https://i.pravatar.cc/150?u=a2" alt="">
+                            <img src="pictures/7.jpg">
                             <div><strong>سارا رحمانی</strong> <br> <small>دکتر علیرضا کریمی</small></div>
                         </div>
                         <div class="time">01:45 ب.ظ <br> <span class="tag-pending">در انتظار</span></div>
@@ -101,11 +103,11 @@
                     <h3>در انتظار تایید</h3>
                     <div class="request-box">
                         <div class="req-header">
-                            <img src="https://i.pravatar.cc/150?u=a2" alt="">
+                            <img src="pictures/7.jpg">
                             <div><strong>سارا رحمانی</strong></div>
                         </div>   
                         <div class="dtime"><small>دکتر علیرضا کریمی</small><small>1404/12/02</small></div>
-                        <div class="dtime"><small>خانواده درمانی</small><small>01:45 ب.ظ</small></div>
+                        <div class="dtime"><small>بازی‌ درمانی</small><small>01:45 ب.ظ</small></div>
                         <div class="req-actions">
                             <button class="btn-reject">رد</button>
                             <button class="btn-accept">تایید</button>
@@ -117,7 +119,7 @@
                     <h3>لغو شده‌ها</h3>
                     <div class="request-box">
                         <div class="req-header">
-                            <img src="https://i.pravatar.cc/150?u=a4" alt="">
+                            <img src="pictures/9.jpg">
                             <div><strong>فرهاد رمضانی</strong></div>
                         </div>
                         <div class="dtime2"><small>1404/12/1</small><small>11:15 ق.ظ</small></div>
@@ -148,18 +150,37 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>MDF-P001</td>
-                            <td><div class="cell-user"><img src="https://i.pravatar.cc/150?u=a5" alt=""> اولیویا مارتینز</div></td>
+                            <td>Z-01</td>
+                            <td><div class="cell-user"><img src="pictures/8.jpg">زهرا کاظمی</div></td>
                             <td>32</td>
                             <td>زن</td>
-                            <td>دکتر گما اوکانر</td>
-                            <td>زوج درمانی</td>
+                            <td>دکتر محمد کیانی</td>
+                            <td>زوج‌ درمانی</td>
                             <td><span class="tag-done">تکمیل شده</span></td>
+                        </tr>
+                        <tr>
+                            <td>D-01</td>
+                            <td><div class="cell-user"><img src="pictures/6.jpg">سمیرا بیاتی</div></td>
+                            <td>17</td>
+                            <td>زن</td>
+                            <td>دکتر محمد کیانی</td>
+                            <td>دارو درمانی</td>
+                            <td><span class="tag-done">تکمیل شده</span></td>
+                        </tr>
+                        <tr>
+                            <td>R-01</td>
+                            <td><div class="cell-user"><img src="pictures/5.jpg">بهروز کیمیا</div></td>
+                            <td>26</td>
+                            <td>مرد</td>
+                            <td>دکتر سپهر زند</td>
+                            <td>روان کاوی</td>
+                            <td><span class="tag-done1">لغو شده</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </main>
+    <script src="moodify.js"></script>
 </body>
 </html>
