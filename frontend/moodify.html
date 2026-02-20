@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moodify</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="moodify.css">
 </head>
@@ -12,7 +13,7 @@
         <div class="logo">
             <i class="fas fa-brain"></i> مودیفای
         </div>
-        <ul class="nav-menu">
+        <ul class="menu">
             <li><i class="fas fa-th-large"></i> داشبورد</li>
             <li class="active"><i class="fas fa-comment-dots"></i> مشاوره</li>
             <li><i class="fas fa-user-md"></i> پزشکان</li>
@@ -76,27 +77,17 @@
             <div class="middle-grid">
                 <div class="card today-counselling">
                     <div class="card-header">
-                        <h3>جلسات امروز</h3>
-                        <div class="calendar-mini">
-                            <i class="fas fa-chevron-right"></i>
-                            <span class="day active">13 سپتامبر</span>
-                            <i class="fas fa-chevron-left"></i>
+                        <h3 id="monthName">جلسات امروز</h3>
+                        <div class="calendar-wrapper">
+                            <button class="cal-nav" id="nextweek"><i class="fas fa-chevron-right"></i></button>
+                            
+                            <div class="days-list" id="daysList"></div>
+                            
+                            <button class="cal-nav" id="prevweek"><i class="fas fa-chevron-left"></i></button>
                         </div>
                     </div>
-                    <div class="apt-row">
-                        <div class="apt-user">
-                            <img src="pictures/2.jpg">
-                            <div><strong>سهیل رمضانی</strong> <br> <small>دکتر آرزو فرهادی</small></div>
-                        </div>
-                        <div class="time">12:30 ب.ظ <br> <span class="tag-done">تکمیل شده</span></div>
-                    </div>
-                    <div class="apt-row">
-                        <div class="apt-user">
-                            <img src="pictures/7.jpg">
-                            <div><strong>سارا رحمانی</strong> <br> <small>دکتر علیرضا کریمی</small></div>
-                        </div>
-                        <div class="time">01:45 ب.ظ <br> <span class="tag-pending">در انتظار</span></div>
-                    </div>
+                
+                    <div id="eventsDisplay" class="events-list"></div>
                 </div>
 
                 <div class="card pending-card">
@@ -129,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
 
             <div class="card table-card">
                 <div class="table-header">
@@ -156,7 +147,7 @@
                             <td>زن</td>
                             <td>دکتر محمد کیانی</td>
                             <td>زوج‌ درمانی</td>
-                            <td><span class="tag-done">تکمیل شده</span></td>
+                            <td><span class="tag">تکمیل شده</span></td>
                         </tr>
                         <tr>
                             <td>D-01</td>
@@ -165,7 +156,7 @@
                             <td>زن</td>
                             <td>دکتر محمد کیانی</td>
                             <td>دارو درمانی</td>
-                            <td><span class="tag-done">تکمیل شده</span></td>
+                            <td><span class="tag">تکمیل شده</span></td>
                         </tr>
                         <tr>
                             <td>R-01</td>
@@ -174,7 +165,7 @@
                             <td>مرد</td>
                             <td>دکتر سپهر زند</td>
                             <td>روان کاوی</td>
-                            <td><span class="tag-done1">لغو شده</span></td>
+                            <td><span class="tag1">لغو شده</span></td>
                         </tr>
                     </tbody>
                 </table>

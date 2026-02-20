@@ -1,12 +1,21 @@
+* {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8faff;
     display: grid;
     direction: rtl;
     grid-template-columns: 210px 1fr;
     min-height: 100vh;
 }
+
+.middle-grid, .stats-grid, .table-card {
+    font-feature-settings: "ss01"; 
+    -webkit-font-feature-settings: "ss01";
+}
+
 
 @media (max-width: 768px) {
     body {
@@ -15,7 +24,6 @@ body {
 
     .sidebar {
         display: none;
-        transition: 0.3s;
     }
     
     .sidebar.active {
@@ -65,7 +73,7 @@ body {
 .border {
     border-radius: 20px;
     padding: 20px;
-    background-color: #f3f1f1;
+    background-color: rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -83,8 +91,16 @@ body {
     color: #7c4dff;
 }
 
-.nav-menu { list-style: none; padding: 0; }
-.nav-menu li {
+.menu { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.menu :hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
+.menu li {
     padding: 12px 15px;
     color: #a0a0a0;
     border-radius: 12px;
@@ -96,7 +112,7 @@ body {
     transition: 0.3s;
 }
 
-.nav-menu li.active {
+.menu li.active {
     background: #7c4dff;
     color: #ffffff;
 }
@@ -130,7 +146,7 @@ body {
 
 .search-box {
     display: flex;
-    background-color: #f3f1f1;
+    background-color: rgba(0,0,0,0.05);
     padding: 10px 20px;
     border-radius: 15px;
     align-items: center;
@@ -160,9 +176,10 @@ body {
 }
 
 .user-profile img {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    border: 2px solid rgba(124, 77, 255, 0.4);
 }
 
 .user-info small{
@@ -176,7 +193,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: #f3f1f1;
+    background-color: rgba(0,0,0,0.05);
     color: black;
     cursor: pointer;
 }
@@ -255,16 +272,10 @@ body {
     vertical-align: top;
 }
 
-.apt-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
 .req-header img{
     width: 40px;
     height: 40px;
+    border: 2px solid rgba(124, 77, 255, 0.4);
     border-radius: 50%;
 }
 
@@ -285,10 +296,8 @@ body {
     opacity: 0.7;
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 5px 8px;
     margin-top: 20px;
-    font-size: large;
-    font-weight: bold;
 }
 
 .dtime3 {
@@ -298,12 +307,10 @@ body {
     line-height: 25px;    
 }
 
-.apt-user { display: flex; align-items: center; gap: 10px; }
-.apt-user img { width: 35px; border-radius: 10px; }
-
-.tag-done { color: #2ecc71; font-size: 12px; }
-.tag-pending { color: #f1c40f; font-size: 12px; }
-.tag-done1 { color: #e74c3c; font-size: 12px; }
+.apt-user { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; }
 
 .table-card { 
     padding: 0; 
@@ -322,8 +329,18 @@ body {
     border-collapse: collapse;
 }
 
-.main-table th { background: #fafafa; padding: 15px; text-align: center; color: var#a0a0a0; }
-.main-table td { padding: 15px; border-top: 1px solid #f0f0f0; text-align: center;}
+.main-table th { 
+    background: #fafafa; 
+    padding: 15px; 
+    text-align: center; 
+    color: rgba(0,0,0,0.5);; 
+}
+
+.main-table td { 
+    padding: 15px; 
+    border-top: 1px solid #f0f0f0; 
+    text-align: center;
+}
 
 .cell-user { 
     display: flex; 
@@ -336,6 +353,17 @@ body {
     width: 30px; 
     height: 30px;
     border-radius: 50%; 
+    border: 2px solid rgba(124, 77, 255, 0.4);
+}
+
+.tag {
+    color: rgb(45, 218, 45); 
+    font-size: 12px;
+}
+
+.tag1 {
+    color: #e74c3c; 
+    font-size: 12px;
 }
 
 .btn-add {
@@ -350,18 +378,19 @@ body {
 }
 
 .btn-accept { 
+    border: none;
     background: #7c4dff; 
     color: #ffffff; 
-    border: 0.5px solid #7c4dff;
     padding: 8px 15px; 
     border-radius: 8px; 
     flex: 1; 
     font-weight: bold;
     cursor: pointer;
 }
+
 .btn-reject { 
-    background: #f3f1f1; 
-    border: 0.5px solid rgb(241, 159, 159); 
+    border: none;
+    background: rgba(0,0,0,0.05);
     padding: 8px 15px; 
     border-radius: 8px; 
     flex: 1; 
@@ -371,12 +400,12 @@ body {
 .req-actions { 
     display: flex; 
     gap: 10px;
-    margin-top: 46px;
+    margin-top: 70px;
 }
 
 .req-actions2 {
     display: flex; 
-    gap: 10px;
+    margin-top: 30px;
 }
 
 .btn-notify {
@@ -388,4 +417,82 @@ body {
     flex: 1;
     font-weight: bold;
     cursor: pointer;
+}
+
+.card-today-counselling{
+    display: block;
+}
+
+.cal-nav {
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    color: #7c4dff;
+}
+
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.05);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.days-list {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex: 1;
+    direction: ltr;
+}
+
+.day-item {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    min-width: 55px;
+    transition: 0.3s;
+}
+
+.day-item.active {
+    background: #7c4dff;
+    color: white;
+}
+
+.day-name { 
+    display: block; 
+    font-size: 11px; 
+    opacity: 0.7;
+}
+
+.day-num { 
+    display: block; 
+    font-weight: bold; 
+    font-size: 16px; 
+}
+
+.apt-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px;
+}
+
+.user-img { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-left: 10px; 
+    border: 2px solid rgba(124, 77, 255, 0.4);
+}
+
+.status.done { 
+    color: rgb(45, 218, 45); 
+    font-size: 12px; 
+}
+.status.pending { 
+    color: #f1c40f; 
+    font-size: 12px; 
 }
