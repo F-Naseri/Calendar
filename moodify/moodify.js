@@ -25,8 +25,9 @@ function renderCalendar() {
 
     daysList.innerHTML = '';
 
-    const currentMonth = new Intl.DateTimeFormat('fa-IR', { month: 'long', year: 'numeric' }).format(baseDate);
-    monthNameDisplay.innerText = `جلسات ${currentMonth}`;
+    const monthName = new Intl.DateTimeFormat('fa-IR', { month: 'long' }).format(baseDate);
+    const yearNum = new Intl.DateTimeFormat('fa-IR', { year: 'numeric' }).format(baseDate);
+    monthNameDisplay.innerText = `جلسات ${monthName} ${yearNum}`;
 
     for (let i = -3; i <= 3; i++) {
         let tempDate = new Date(baseDate);
